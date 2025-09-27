@@ -30,7 +30,7 @@ To meet the requirements of a relational database and to facilitate analysis, th
 
 This section presents the results of executing SQL queries against the database, from basic exploration to complex analytical questions.
 
-##### Basic Queries
+##### 4. Basic Queries
 These are examples of basic queries used for the initial exploration of the data.
 
 1. (SELECT, LIMIT)
@@ -45,3 +45,13 @@ These are examples of basic queries used for the initial exploration of the data
 ![Basic Query Result 1](screenshots/basic_query_01.jpg)
 <p align="center">Join tables: show client city for each order</p>
 
+### 5. Run the Analysis Script
+
+The main script, `main.py`, connects to the database, executes several SQL queries, prints the results to the terminal, and saves them to `.csv` files.
+
+1.  **Configure Connection:** Before running, open `main.py` and enter your database connection details in the `DB_CONFIG` dictionary.
+2.  **Run the script:** Execute the following command in your terminal:
+    
+    ```bash
+    python main.py
+    ```
