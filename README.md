@@ -18,7 +18,7 @@ To meet the requirements of a relational database and to facilitate analysis, th
 ## 🛠️ Tools and Technologies
 
 * **Database:** PostgreSQL
-* **Programming Language:** Python 3.9+
+* **Programming Language:** Python 3.11
 * **Key Python Libraries:**
     * `pandas` - for data processing during import.
     * `psycopg2-binary` (for PostgreSQL) - for connecting to the database.
@@ -26,3 +26,22 @@ To meet the requirements of a relational database and to facilitate analysis, th
 * **Version Control:** Git & GitHub
 
 ***
+## 📈 Data Analysis: SQL Queries and Results
+
+This section presents the results of executing SQL queries against the database, from basic exploration to complex analytical questions.
+
+##### Basic Queries
+These are examples of basic queries used for the initial exploration of the data.
+
+1. (SELECT, LIMIT)
+![Basic Query Result 1](screenshots/basic_query_01.png)
+<p align="center">View the first 10 rows of the orders table</p>
+
+2. (GROUP BY, COUNT)
+![Basic Query Result 1](screenshots/basic_query_01.png)
+<p align="center">Group and count: number of orders per status</p>
+
+3. (JOIN)
+![Basic Query Result 1](screenshots/basic_query_01.png)
+<p align="center">Join tables: show client city for each order</p>
+
