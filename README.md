@@ -55,3 +55,6 @@ The main script, `main.py`, connects to the database, executes several SQL queri
     ```bash
     python main.py
     ```
+
+   ![Basic Query Result 1](screenshots/terminal.jpg)
+   <p align="center">Successful connection and results reveal</p>
