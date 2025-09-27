@@ -13,7 +13,7 @@ In this project, we are conducting a comprehensive analysis of data from the Bra
 To meet the requirements of a relational database and to facilitate analysis, the original flat dataset was normalized. The schema below describes the tables and the relationships between them.
 
 ![ER Diagram](screenshots/er_diagram.png)
-*<p align="center">A screenshot of your ER Diagram created with dbdiagram.io</p>*
+*<p align="center">A screenshot of my ER Diagram </p>*
 
 ## 🛠️ Tools and Technologies
 
