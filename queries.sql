@@ -1,78 +1,151 @@
-CREATE TABLE product_category_name_translation (
-    product_category_name VARCHAR(255) PRIMARY KEY,
-    product_category_name_english VARCHAR(255)
-);
+-- 1. какое количество заказов приходится на каждый штат? (топ-10 штатов)
+-- Помогает понять географию продаж
+SELECT
+    c.customer_state,
+    COUNT(o.order_id) AS order_count
+FROM
+    orders AS o
+JOIN
+    customers AS c ON o.customer_id = c.customer_id
+GROUP BY
+    c.customer_state
+ORDER BY
+    order_count DESC
+LIMIT 10;
 
-CREATE TABLE customers (
-    customer_id VARCHAR(255) PRIMARY KEY,
-    customer_unique_id VARCHAR(255),
-    customer_zip_code_prefix INT,
-    customer_city VARCHAR(255),
-    customer_state VARCHAR(2)
-);
 
-CREATE TABLE sellers (
-    seller_id VARCHAR(255) PRIMARY KEY,
-    seller_zip_code_prefix INT,
-    seller_city VARCHAR(255),
-    seller_state VARCHAR(2)
-);
+-- 2. Какое среднее время доставки заказов?
+-- Оценивает эффективность логистики
+SELECT
+    AVG(order_delivered_customer_date - order_purchase_timestamp) AS average_delivery_time
+FROM
+    orders
+WHERE
+    order_status = 'delivered';
 
-CREATE TABLE products (
-    product_id VARCHAR(255) PRIMARY KEY,
-    product_category_name VARCHAR(255),
-    product_name_lenght INT,
-    product_description_lenght INT,
-    product_photos_qty INT,
-    product_weight_g INT,
-    product_length_cm INT,
-    product_height_cm INT,
-    product_width_cm INT
-);
 
-CREATE TABLE orders (
-    order_id VARCHAR(255) PRIMARY KEY,
-    customer_id VARCHAR(255),
-    order_status VARCHAR(50),
-    order_purchase_timestamp TIMESTAMP,
-    order_approved_at TIMESTAMP,
-    order_delivered_carrier_date TIMESTAMP,
-    order_delivered_customer_date TIMESTAMP,
-    order_estimated_delivery_date TIMESTAMP,
-    FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
-);
+-- 3. Какие способы оплаты самые популярные?
+-- Показывает предпочтения клиентов
+SELECT
+    payment_type,
+    COUNT(order_id) AS total_payments
+FROM
+    order_payments
+GROUP BY
+    payment_type
+ORDER BY
+    total_payments DESC;
 
-CREATE TABLE order_items (
-    order_id VARCHAR(255),
-    order_item_id INT,
-    product_id VARCHAR(255),
-    seller_id VARCHAR(255),
-    shipping_limit_date TIMESTAMP,
-    price FLOAT,
-    freight_value FLOAT,
-    PRIMARY KEY (order_id, order_item_id),
-    FOREIGN KEY (order_id) REFERENCES orders(order_id),
-    FOREIGN KEY (product_id) REFERENCES products(product_id),
-    FOREIGN KEY (seller_id) REFERENCES sellers(seller_id)
-);
 
-CREATE TABLE order_payments (
-    order_id VARCHAR(255),
-    payment_sequential INT,
-    payment_type VARCHAR(50),
-    payment_installments INT,
-    payment_value FLOAT,
-    FOREIGN KEY (order_id) REFERENCES orders(order_id)
-);
+-- 4. Какая средняя оценка (review score) у товаров в разных категориях? (топ-10)
+-- Помогает выявить самые качественные и некачественные категории товаров
+SELECT
+    t.product_category_name_english,
+    AVG(r.review_score) AS average_score
+FROM
+    order_reviews AS r
+JOIN
+    order_items AS oi ON r.order_id = oi.order_id
+JOIN
+    products AS p ON oi.product_id = p.product_id
+JOIN
+    product_category_name_translation AS t ON p.product_category_name = t.product_category_name
+GROUP BY
+    t.product_category_name_english
+ORDER BY
+    average_score DESC
+LIMIT 10;
 
-CREATE TABLE order_reviews (
-    review_id VARCHAR(255),
-    order_id VARCHAR(255),
-    review_score INT,
-    review_comment_title VARCHAR(255),
-    review_comment_message TEXT,
-    review_creation_date TIMESTAMP,
-    review_answer_timestamp TIMESTAMP,
-    PRIMARY KEY (review_id, order_id),
-    FOREIGN KEY (order_id) REFERENCES orders(order_id)
-);
+
+-- 5. Сколько заказов было сделано в каждом месяце?
+-- Позволяет увидеть сезонность продаж
+SELECT
+    DATE_TRUNC('month', order_purchase_timestamp)::DATE AS month,
+    COUNT(order_id) AS number_of_orders
+FROM
+    orders
+GROUP BY
+    month
+ORDER BY
+    month;
+
+
+-- 6. Топ-10 самых дорогих товаров, которые были проданы?
+-- Помогает понять, какие товары приносят максимальный доход за единицу
+SELECT
+    p.product_id,
+    t.product_category_name_english,
+    oi.price
+FROM
+    order_items AS oi
+JOIN
+    products AS p ON oi.product_id = p.product_id
+JOIN
+    product_category_name_translation AS t ON p.product_category_name = t.product_category_name
+ORDER BY
+    oi.price DESC
+LIMIT 10;
+
+
+-- 7. Каково распределение оценок (от 1 до 5) среди всех отзывов?
+-- Показывает общий уровень удовлетворенности клиентов
+SELECT
+    review_score,
+    COUNT(review_id) AS score_count
+FROM
+    order_reviews
+GROUP BY
+    review_score
+ORDER BY
+    review_score;
+
+
+-- 8. Топ-10 продавцов по количеству проданных товаров
+-- Помогает выявить ключевых партнеров на платформе
+SELECT
+    seller_id,
+    COUNT(order_item_id) AS items_sold
+FROM
+    order_items
+GROUP BY
+    seller_id
+ORDER BY
+    items_sold DESC
+LIMIT 10;
+
+
+-- 9. Какая средняя стоимость доставки (freight_value) в разные штаты? (топ-10 самых дорогих)
+-- Помогает в анализе логистических затрат
+SELECT
+    c.customer_state,
+    AVG(oi.freight_value) AS average_freight
+FROM
+    order_items AS oi
+JOIN
+    orders AS o ON oi.order_id = o.order_id
+JOIN
+    customers AS c ON o.customer_id = c.customer_id
+GROUP BY
+    c.customer_state
+ORDER BY
+    average_freight DESC
+LIMIT 10;
+
+
+-- 10. Сколько клиентов являются "постоянными" (делали больше одного заказа)?
+-- Помогает оценить лояльность клиентской базы
+SELECT
+    COUNT(*) AS loyal_customers
+FROM (
+    SELECT
+        c.customer_unique_id,
+        COUNT(o.order_id) AS order_count
+    FROM
+        orders AS o
+    JOIN
+        customers AS c ON o.customer_id = c.customer_id
+    GROUP BY
+        c.customer_unique_id
+    HAVING
+        COUNT(o.order_id) > 1
+) AS loyal_customer_counts;
