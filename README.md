@@ -34,14 +34,14 @@ This section presents the results of executing SQL queries against the database,
 These are examples of basic queries used for the initial exploration of the data.
 
 1. (SELECT, LIMIT)
-![Basic Query Result 1](screenshots/basic_query_01.png)
+![Basic Query Result 1](screenshots/basic_query_01.jpg)
 <p align="center">View the first 10 rows of the orders table</p>
 
 2. (GROUP BY, COUNT)
-![Basic Query Result 1](screenshots/basic_query_01.png)
+![Basic Query Result 1](screenshots/basic_query_01.jpg)
 <p align="center">Group and count: number of orders per status</p>
 
 3. (JOIN)
-![Basic Query Result 1](screenshots/basic_query_01.png)
+![Basic Query Result 1](screenshots/basic_query_01.jpg)
 <p align="center">Join tables: show client city for each order</p>
 
