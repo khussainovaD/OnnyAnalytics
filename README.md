@@ -25,7 +25,6 @@ To meet the requirements of a relational database and to facilitate analysis, th
     * `sqlalchemy` - for easier interaction with the DB.
 * **Version Control:** Git & GitHub
 
-***
 ## 📈 Data Analysis: SQL Queries and Results
 
 This section presents the results of executing SQL queries against the database, from basic exploration to complex analytical questions.
