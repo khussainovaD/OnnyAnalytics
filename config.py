@@ -5,3 +5,4 @@ DB_CONFIG = {
     "database": "olist_db",
     "port": 5432
 }
+

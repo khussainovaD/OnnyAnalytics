@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 from sqlalchemy import create_engine
 import os
 import plotly.express as px
+from openpyxl.formatting.rule import ColorScaleRule
+from openpyxl.utils import get_column_letter
 
 plt.style.use('seaborn-v0_8-poster')
 from config import DB_CONFIG
@@ -13,157 +15,19 @@ db_connection_str = (
 )
 db_engine = create_engine(db_connection_str)
 
-bar_chart_query = """
---
-SELECT
-    t.product_category_name_english AS category,
-    AVG(r.review_score) AS average_score,
-    AVG(oi.freight_value) AS average_freight_value
-FROM
-    order_items AS oi
-JOIN
-    products AS p ON oi.product_id = p.product_id
-JOIN
-    order_reviews AS r ON oi.order_id = r.order_id
-JOIN
-    product_category_name_translation AS t ON p.product_category_name = t.product_category_name
-GROUP BY
-    t.product_category_name_english
-HAVING
-    COUNT(oi.product_id) > 50
-ORDER BY
-    average_score DESC
-LIMIT 5;
-"""
+def load_query(filename):
+    """Загружает SQL-запрос из файла в папке /sql."""
+    filepath = os.path.join('sql', filename)
+    with open(filepath, 'r', encoding='utf-8') as file:
+        return file.read()
 
-pie_chart_query = """
--- "Каково распределение способов оплаты для топ-3 самых продаваемых категорий товаров?"
-SELECT
-    t.product_category_name_english AS category,
-    op.payment_type
-FROM
-    order_payments AS op
-JOIN
-    order_items AS oi ON op.order_id = oi.order_id
-JOIN
-    products AS p ON oi.product_id = p.product_id
-JOIN
-    product_category_name_translation AS t ON p.product_category_name = t.product_category_name
-WHERE
-    t.product_category_name_english IN (
-        SELECT
-            t2.product_category_name_english
-        FROM
-            order_items oi2
-        JOIN
-            products p2 ON oi2.product_id = p2.product_id
-        JOIN
-            product_category_name_translation t2 ON p2.product_category_name = t2.product_category_name
-        GROUP BY
-            t2.product_category_name_english
-        ORDER BY
-            COUNT(oi2.order_item_id) DESC
-        LIMIT 3
-    );
-"""
-
-hbar_chart_query= """
--- "Топ-10 городов по средней сумме чека"
-SELECT
-    c.customer_city,
-    AVG(op.payment_value) as average_payment
-FROM
-    order_payments AS op
-JOIN
-    orders AS o ON op.order_id = o.order_id
-JOIN
-    customers AS c ON o.customer_id = c.customer_id
-GROUP BY
-    c.customer_city
-ORDER BY
-    average_payment DESC
-LIMIT 10;
-"""
-
-line_chart_query = """
--- "Как менялось общее количество проданных товаров по месяцам?"
-SELECT
-    DATE_TRUNC('month', o.order_purchase_timestamp)::DATE AS month,
-    COUNT(oi.order_item_id) AS items_sold
-FROM
-    orders AS o
-JOIN
-    order_items AS oi ON o.order_id = oi.order_id
-WHERE o.order_status = 'delivered'
-GROUP BY
-    month
-ORDER BY
-    month;
-"""
-
-histogram_query = """
--- "Каково распределение цен на товары в категории 'Компьютеры и аксессуары'?"
-SELECT
-    oi.price
-FROM
-    order_items AS oi
-JOIN
-    products AS p ON oi.product_id = p.product_id
-JOIN
-    product_category_name_translation AS t ON p.product_category_name = t.product_category_name
-WHERE
-    t.product_category_name_english = 'computers_accessories' AND oi.price < 500; -- Ограничим цену для наглядности
-"""
-
-scatter_plot_query = """
--- Собираем данные о количестве фото и среднем рейтинге для каждого товара
-SELECT
-    p.product_id,
-    p.product_photos_qty,
-    AVG(r.review_score) AS avg_review_score
-FROM
-    products AS p
-JOIN
-    order_items AS oi ON p.product_id = oi.product_id
-JOIN
-    order_reviews AS r ON oi.order_id = r.order_id
-WHERE
-    p.product_photos_qty IS NOT NULL
-GROUP BY
-    p.product_id, p.product_photos_qty
-HAVING
-    COUNT(r.review_id) > 5
-LIMIT 1000;
-"""
-
-interactive_plot_query = """
--- Собираем агрегированные данные по месяцам для интерактивного графика
-SELECT
-    TO_CHAR(o.order_purchase_timestamp, 'YYYY-MM') AS year_month,
-    t.product_category_name_english AS category,
-    AVG(oi.price) AS average_price,
-    AVG(r.review_score) AS average_review_score,
-    COUNT(o.order_id) AS order_count
-FROM
-    orders AS o
-JOIN
-    order_items AS oi ON o.order_id = oi.order_id
-JOIN
-    order_reviews AS r ON o.order_id = r.order_id
-JOIN
-    products AS p ON oi.product_id = p.product_id
-JOIN
-    product_category_name_translation AS t ON p.product_category_name = t.product_category_name
-WHERE
-    o.order_status = 'delivered' AND
-    p.product_category_name IS NOT NULL
-GROUP BY
-    year_month, category
-HAVING
-    COUNT(o.order_id) > 20 -- Убираем категории со слишком малым числом заказов в месяц
-ORDER BY
-    year_month, category;
-"""
+bar_chart_query = load_query('bar_chart.sql')
+pie_chart_query = load_query('pie_chart.sql')
+hbar_chart_query = load_query('hbar_chart.sql')
+line_chart_query = load_query('line_chart.sql')
+histogram_query = load_query('histogram.sql')
+scatter_plot_query = load_query('scatter_plot.sql')
+interactive_plot_query = load_query('interactive_plot.sql')
 
 def create_bar_chart(df, filename="bar_chart_avg_freight.png"):
     print(f"\n--- столбчатая диаграмма ---")
@@ -344,8 +208,47 @@ def create_interactive_plot(df):
         legend_title_text='Категории'
     )
 
-    print("Открывается интерактивный график в вашем браузере...")
+    print("Открывается интерактивный график в браузере...")
     fig.show(renderer="browser")
+
+def export_to_excel(dataframes_dict, filename="olist_analytics_report.xlsx"):
+
+    if not os.path.exists('exports'):
+        os.makedirs('exports')
+    filepath = os.path.join('exports', filename)
+
+    print(f"\n--- Создание отчета в Excel: '{filepath}' ---")
+    
+    with pd.ExcelWriter(filepath, engine='openpyxl') as writer:
+        total_rows = 0
+        for sheet_name, df in dataframes_dict.items():
+            df.to_excel(writer, sheet_name=sheet_name, index=False)
+            total_rows += len(df)
+        workbook = writer.book
+
+        for sheet_name, df in dataframes_dict.items():
+            worksheet = workbook[sheet_name]
+
+            worksheet.freeze_panes = "A2"
+            worksheet.auto_filter.ref = worksheet.dimensions
+
+            for col_idx, column in enumerate(df.columns, 1):
+                col_letter = get_column_letter(col_idx)
+                
+                max_length = max(df[column].astype(str).map(len).max(), len(column)) + 2
+                worksheet.column_dimensions[col_letter].width = max_length
+
+                if pd.api.types.is_numeric_dtype(df[column]):
+                    cell_range = f"{col_letter}2:{col_letter}{len(df) + 1}"
+                    
+                    color_scale_rule = ColorScaleRule(
+                        start_type='min', start_color='FFEE5858', # Светло-красный
+                        end_type='max', end_color='FF63BE7B'     # Светло-зеленый
+                    )
+                    worksheet.conditional_formatting.add(cell_range, color_scale_rule)
+    print(f"✓ Отчет успешно создан.")
+    print(f"  - Количество листов: {len(dataframes_dict)}")
+    print(f"  - Всего строк экспортировано: {total_rows}")
 
 if __name__ == "__main__":
     try:
@@ -357,7 +260,7 @@ if __name__ == "__main__":
         # df_pie = pd.read_sql(pie_chart_query, db_engine)
         # create_pie_chart(df_pie)
         
-        # # 3. Горизонтальная столбчатая диаграмма
+        # # 3. Горизонтальная столбчатая диаграмма ПРИМЕР
         # df_hbar = pd.read_sql(hbar_chart_query, db_engine)
         # create_hbar_chart(df_hbar)
         
@@ -376,6 +279,22 @@ if __name__ == "__main__":
         # 7. Интерактивный график
         df_interactive = pd.read_sql(interactive_plot_query, db_engine)
         create_interactive_plot(df_interactive)
+
+        # 8.1. Определяем, какие данные мы хотим экспортировать
+        # reports_to_export = {
+        #     "top_10_sellers": load_query('top_sellers_by_items.sql'),
+        #     "sales_by_month": load_query('orders_by_month.sql'),
+        #     "avg_freight_by_state": load_query('avg_freight_by_state.sql')
+        # }
+        
+        # # 8.2. Создаем словарь для хранения DataFrame'ов
+        # dataframes_for_excel = {}
+        
+        # print("\n--- Подготовка данных для Excel-отчета ---")
+        # for report_name, query in reports_to_export.items():
+        #     print(f"Выполняется запрос для отчета: '{report_name}'...")
+        #     dataframes_for_excel[report_name] = pd.read_sql(query, db_engine)
+        # export_to_excel(dataframes_for_excel)
 
     except Exception as e:
         print(f"Произошла ошибка: {e}")
