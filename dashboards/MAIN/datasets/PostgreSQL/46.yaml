@@ -1,0 +1,83 @@
+table_name: "\u0421\u0442\u0440\u0443\u043A\u0442\u0443\u0440\u0430 \u0432\u044B\u0440\
+  \u0443\u0447\u043A\u0438 \u043F\u043E \u0440\u0435\u0433\u0438\u043E\u043D\u0430\
+  \u043C \u0438 \u043A\u0430\u0442\u0435\u0433\u043E\u0440\u0438\u044F\u043C"
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+catalog: olist_db
+schema: public
+sql: "SELECT\n  c.customer_state AS \"\u0428\u0442\u0430\u0442 \u043A\u043B\u0438\u0435\
+  \u043D\u0442\u0430\",\n  t.product_category_name_english AS \"\u041A\u0430\u0442\
+  \u0435\u0433\u043E\u0440\u0438\u044F \u0442\u043E\u0432\u0430\u0440\u0430\",\n \
+  \ SUM(oi.price) AS \"\u041E\u0431\u0449\u0430\u044F \u0432\u044B\u0440\u0443\u0447\
+  \u043A\u0430\"\nFROM\n  order_items AS oi\n  JOIN orders AS o ON oi.order_id = o.order_id\n\
+  \  JOIN customers AS c ON o.customer_id = c.customer_id\n  JOIN products AS p ON\
+  \ oi.product_id = p.product_id\n  JOIN product_category_name_translation AS t ON\
+  \ p.product_category_name = t.product_category_name\nWHERE\n  c.customer_state IS\
+  \ NOT NULL\n  AND t.product_category_name_english IS NOT NULL\nGROUP BY\n  c.customer_state,\n\
+  \  t.product_category_name_english\nHAVING\n  -- \u041E\u0441\u0442\u0430\u0432\u043B\
+  \u044F\u0435\u043C \u0442\u043E\u043B\u044C\u043A\u043E \u0437\u043D\u0430\u0447\
+  \u0438\u043C\u044B\u0435 \u043A\u043E\u043C\u0431\u0438\u043D\u0430\u0446\u0438\u0438\
+  , \u0447\u0442\u043E\u0431\u044B \u0433\u0440\u0430\u0444\u0438\u043A \u0431\u044B\
+  \u043B \u0447\u0438\u0449\u0435\n  SUM(oi.price) > 5000;"
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: 6d5c25ec-ff5f-4dd9-9619-b5476197fc63
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: "\u041E\u0431\u0449\u0430\u044F \u0432\u044B\u0440\u0443\u0447\u043A\
+    \u0430"
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: FLOAT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: "\u041A\u0430\u0442\u0435\u0433\u043E\u0440\u0438\u044F \u0442\u043E\
+    \u0432\u0430\u0440\u0430"
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: "\u0428\u0442\u0430\u0442 \u043A\u043B\u0438\u0435\u043D\u0442\u0430"
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 36600231-221d-41fd-b910-1bb35b9465df

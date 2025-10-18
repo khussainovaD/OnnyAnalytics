@@ -1,0 +1,89 @@
+slice_name: "8. \u0421\u0442\u0440\u0443\u043A\u0442\u0443\u0440\u0430 \u0432\u044B\
+  \u0440\u0443\u0447\u043A\u0438 \u043F\u043E \u0440\u0435\u0433\u0438\u043E\u043D\
+  \u0430\u043C \u0438 \u0442\u043E\u0432\u0430\u0440\u043D\u044B\u043C \u043A\u0430\
+  \u0442\u0435\u0433\u043E\u0440\u0438\u044F\u043C"
+description: null
+certified_by: null
+certification_details: null
+viz_type: treemap_v2
+params:
+  datasource: 46__table
+  viz_type: treemap_v2
+  groupby:
+  - "\u0428\u0442\u0430\u0442 \u043A\u043B\u0438\u0435\u043D\u0442\u0430"
+  - "\u041A\u0430\u0442\u0435\u0433\u043E\u0440\u0438\u044F \u0442\u043E\u0432\u0430\
+    \u0440\u0430"
+  metric:
+    expressionType: SIMPLE
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: "\u041E\u0431\u0449\u0430\u044F \u0432\u044B\u0440\u0443\u0447\u043A\
+        \u0430"
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 852
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: FLOAT
+      type_generic: 0
+      verbose_name: null
+      warning_markdown: null
+    aggregate: SUM
+    sqlExpression: null
+    datasourceWarning: false
+    hasCustomLabel: false
+    label: "SUM(\u041E\u0431\u0449\u0430\u044F \u0432\u044B\u0440\u0443\u0447\u043A\
+      \u0430)"
+    optionName: metric_iys20i0lq3s_sgzkjrfnih
+  row_limit: 10000
+  adhoc_filters: []
+  color_scheme: echarts5Colors
+  show_labels: true
+  show_upper_labels: true
+  label_type: key_value
+  number_format: SMART_NUMBER
+  date_format: smart_date
+  extra_form_data: {}
+  dashboards:
+  - 14
+query_context: "{\"datasource\":{\"id\":46,\"type\":\"table\"},\"force\":false,\"\
+  queries\":[{\"filters\":[],\"extras\":{\"having\":\"\",\"where\":\"\"},\"applied_time_extras\"\
+  :{},\"columns\":[\"\u0428\u0442\u0430\u0442 \u043A\u043B\u0438\u0435\u043D\u0442\
+  \u0430\",\"\u041A\u0430\u0442\u0435\u0433\u043E\u0440\u0438\u044F \u0442\u043E\u0432\
+  \u0430\u0440\u0430\"],\"metrics\":[{\"expressionType\":\"SIMPLE\",\"column\":{\"\
+  advanced_data_type\":null,\"certification_details\":null,\"certified_by\":null,\"\
+  column_name\":\"\u041E\u0431\u0449\u0430\u044F \u0432\u044B\u0440\u0443\u0447\u043A\
+  \u0430\",\"description\":null,\"expression\":null,\"filterable\":true,\"groupby\"\
+  :true,\"id\":852,\"is_certified\":false,\"is_dttm\":false,\"python_date_format\"\
+  :null,\"type\":\"FLOAT\",\"type_generic\":0,\"verbose_name\":null,\"warning_markdown\"\
+  :null},\"aggregate\":\"SUM\",\"sqlExpression\":null,\"datasourceWarning\":false,\"\
+  hasCustomLabel\":false,\"label\":\"SUM(\u041E\u0431\u0449\u0430\u044F \u0432\u044B\
+  \u0440\u0443\u0447\u043A\u0430)\",\"optionName\":\"metric_iys20i0lq3s_sgzkjrfnih\"\
+  }],\"annotation_layers\":[],\"row_limit\":10000,\"series_limit\":0,\"order_desc\"\
+  :true,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{}}],\"form_data\"\
+  :{\"datasource\":\"46__table\",\"viz_type\":\"treemap_v2\",\"groupby\":[\"\u0428\
+  \u0442\u0430\u0442 \u043A\u043B\u0438\u0435\u043D\u0442\u0430\",\"\u041A\u0430\u0442\
+  \u0435\u0433\u043E\u0440\u0438\u044F \u0442\u043E\u0432\u0430\u0440\u0430\"],\"\
+  metric\":{\"expressionType\":\"SIMPLE\",\"column\":{\"advanced_data_type\":null,\"\
+  certification_details\":null,\"certified_by\":null,\"column_name\":\"\u041E\u0431\
+  \u0449\u0430\u044F \u0432\u044B\u0440\u0443\u0447\u043A\u0430\",\"description\"\
+  :null,\"expression\":null,\"filterable\":true,\"groupby\":true,\"id\":852,\"is_certified\"\
+  :false,\"is_dttm\":false,\"python_date_format\":null,\"type\":\"FLOAT\",\"type_generic\"\
+  :0,\"verbose_name\":null,\"warning_markdown\":null},\"aggregate\":\"SUM\",\"sqlExpression\"\
+  :null,\"datasourceWarning\":false,\"hasCustomLabel\":false,\"label\":\"SUM(\u041E\
+  \u0431\u0449\u0430\u044F \u0432\u044B\u0440\u0443\u0447\u043A\u0430)\",\"optionName\"\
+  :\"metric_iys20i0lq3s_sgzkjrfnih\"},\"row_limit\":10000,\"adhoc_filters\":[],\"\
+  color_scheme\":\"echarts5Colors\",\"show_labels\":true,\"show_upper_labels\":true,\"\
+  label_type\":\"key_value\",\"number_format\":\"SMART_NUMBER\",\"date_format\":\"\
+  smart_date\",\"extra_form_data\":{},\"dashboards\":[14],\"force\":false,\"result_format\"\
+  :\"json\",\"result_type\":\"full\"},\"result_format\":\"json\",\"result_type\":\"\
+  full\"}"
+cache_timeout: null
+uuid: 8b9f4c9b-f51b-4877-a618-e887948c849e
+version: 1.0.0
+dataset_uuid: 6d5c25ec-ff5f-4dd9-9619-b5476197fc63

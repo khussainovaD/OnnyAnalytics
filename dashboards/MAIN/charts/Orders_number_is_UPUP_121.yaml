@@ -1,0 +1,29 @@
+slice_name: Orders number is UPUP
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  datasource: 29__table
+  viz_type: big_number_total
+  metric: count
+  adhoc_filters:
+  - clause: WHERE
+    subject: review_creation_date
+    operator: TEMPORAL_RANGE
+    comparator: No filter
+    expressionType: SIMPLE
+  header_font_size: 0.4
+  subheader_font_size: 0.15
+  y_axis_format: SMART_NUMBER
+  time_format: smart_date
+  extra_form_data: {}
+  dashboards:
+  - 14
+query_context: '{"datasource":{"id":29,"type":"table"},"force":false,"queries":[{"filters":[{"col":"review_creation_date","op":"TEMPORAL_RANGE","val":"No
+  filter"}],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":[],"metrics":["count"],"annotation_layers":[],"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"29__table","viz_type":"big_number_total","metric":"count","adhoc_filters":[{"clause":"WHERE","subject":"review_creation_date","operator":"TEMPORAL_RANGE","comparator":"No
+  filter","expressionType":"SIMPLE"}],"header_font_size":0.4,"subheader_font_size":0.15,"y_axis_format":"SMART_NUMBER","time_format":"smart_date","extra_form_data":{},"dashboards":[14],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 89b5a35c-e409-45b7-9681-b774b1fcf8e9
+version: 1.0.0
+dataset_uuid: 3019fc1d-c843-4a88-806a-cdbac8801aa5

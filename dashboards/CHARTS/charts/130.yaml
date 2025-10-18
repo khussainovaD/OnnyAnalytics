@@ -1,0 +1,43 @@
+slice_name: "\u0420\u0430\u0441\u043F\u0440\u0435\u0434\u0435\u043B\u0435\u043D\u0438\
+  \u0435 \u0446\u0435\u043D \u043D\u0430 \u041A\u043E\u043C\u043F\u044C\u044E\u0442\
+  \u0435\u0440\u044B \u0438 \u0430\u043A\u0441\u0435\u0441\u0441\u0443\u0430\u0440\
+  \u044B"
+description: null
+certified_by: null
+certification_details: null
+viz_type: histogram_v2
+params:
+  datasource: 39__table
+  viz_type: histogram_v2
+  column: "\u0426\u0435\u043D\u0430"
+  groupby: []
+  adhoc_filters: []
+  row_limit: '7600'
+  bins: '30'
+  color_scheme: redToYellow
+  show_legend: true
+  x_axis_title: "\u0426\u0435\u043D\u0430"
+  x_axis_format: SMART_NUMBER
+  y_axis_title: "\u0427\u0430\u0441\u0442\u043E\u0442\u0430"
+  y_axis_format: SMART_NUMBER
+  extra_form_data: {}
+  dashboards:
+  - 17
+query_context: "{\"datasource\":{\"id\":39,\"type\":\"table\"},\"force\":false,\"\
+  queries\":[{\"filters\":[],\"extras\":{\"having\":\"\",\"where\":\"\"},\"applied_time_extras\"\
+  :{},\"columns\":[\"\u0426\u0435\u043D\u0430\"],\"annotation_layers\":[],\"row_limit\"\
+  :7600,\"series_limit\":0,\"order_desc\":true,\"url_params\":{},\"custom_params\"\
+  :{},\"custom_form_data\":{},\"post_processing\":[{\"operation\":\"histogram\",\"\
+  options\":{\"column\":\"\u0426\u0435\u043D\u0430\",\"groupby\":[],\"bins\":30}}]}],\"\
+  form_data\":{\"datasource\":\"39__table\",\"viz_type\":\"histogram_v2\",\"column\"\
+  :\"\u0426\u0435\u043D\u0430\",\"groupby\":[],\"adhoc_filters\":[],\"row_limit\"\
+  :\"7600\",\"bins\":\"30\",\"color_scheme\":\"redToYellow\",\"show_legend\":true,\"\
+  x_axis_title\":\"\u0426\u0435\u043D\u0430\",\"x_axis_format\":\"SMART_NUMBER\",\"\
+  y_axis_title\":\"\u0427\u0430\u0441\u0442\u043E\u0442\u0430\",\"y_axis_format\"\
+  :\"SMART_NUMBER\",\"extra_form_data\":{},\"dashboards\":[17],\"force\":false,\"\
+  result_format\":\"json\",\"result_type\":\"full\"},\"result_format\":\"json\",\"\
+  result_type\":\"full\"}"
+cache_timeout: null
+uuid: 7bbba815-fade-46df-ab4d-7204fe059472
+version: 1.0.0
+dataset_uuid: 7b56f739-a581-40bc-8448-f2a8f1af2f85

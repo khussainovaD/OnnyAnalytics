@@ -1,0 +1,863 @@
+dashboard_title: "\u041E\u0431\u0437\u043E\u0440 \u0411\u0438\u0437\u043D\u0435\u0441\
+  \u0430 (\u0434\u043B\u044F \u0420\u0443\u043A\u043E\u0432\u043E\u0434\u0441\u0442\
+  \u0432\u0430)"
+description: null
+css: ''
+slug: null
+certified_by: ''
+certification_details: ''
+published: false
+uuid: 5349e6f0-da7b-4353-a1c7-0a79a21f3be9
+position:
+  CHART-565Ec_R9iLb7iXxgQ78_Z:
+    children: []
+    id: CHART-565Ec_R9iLb7iXxgQ78_Z
+    meta:
+      chartId: 211
+      height: 50
+      sliceName: "7. \u0421\u0442\u0440\u0443\u043A\u0442\u0443\u0440\u0430 \u043F\
+        \u0440\u043E\u0434\u0430\u0436 \u043F\u043E \u0440\u0435\u0433\u0438\u043E\
+        \u043D\u0430\u043C \u0438 \u043A\u0430\u0442\u0435\u0433\u043E\u0440\u0438\
+        \u044F\u043C"
+      uuid: 083d5ba4-ebc6-4379-b2ee-17eb56b84e1f
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-ko0pmhmBmDNSWTUQ0kQ54
+    type: CHART
+  CHART-c6jGQbS08Agwz_FOyK1qM:
+    children: []
+    id: CHART-c6jGQbS08Agwz_FOyK1qM
+    meta:
+      chartId: 124
+      height: 50
+      sliceName: "\u0414\u0438\u043D\u0430\u043C\u0438\u043A\u0430 \u0437\u0430\u043A\
+        \u0430\u0437\u043E\u0432 \u0438 \u0432\u044B\u0440\u0443\u0447\u043A\u0438"
+      uuid: 334ba26c-4e2f-4c75-ac07-72157b293183
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-ko0pmhmBmDNSWTUQ0kQ54
+    type: CHART
+  CHART-explore-123-1:
+    children: []
+    id: CHART-explore-123-1
+    meta:
+      chartId: 123
+      height: 50
+      sliceName: "\u0421\u0440\u0435\u0434\u043D\u0438\u0439 \u0440\u0435\u0439\u0442\
+        \u0438\u043D\u0433 \u0437\u0430\u043A\u0430\u0437\u043E\u0432"
+      uuid: a07f2f57-d545-4272-bfb6-022e006930e7
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-ko0pmhmBmDNSWTUQ0kQ54
+    type: CHART
+  CHART-explore-125-1:
+    children: []
+    id: CHART-explore-125-1
+    meta:
+      chartId: 125
+      height: 50
+      sliceName: "\u041F\u0440\u043E\u0434\u0430\u0436\u0438 \u043F\u043E \u043A\u0430\
+        \u0442\u0435\u0433\u043E\u0440\u0438\u044F\u043C"
+      uuid: d9c7a372-c945-4afa-be16-4d0ebf1ee15e
+      width: 9
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-cFHHxIdLYi114TYAP2PkV
+    type: CHART
+  CHART-ytpY6sMkNcJjNUpdq93LN:
+    children: []
+    id: CHART-ytpY6sMkNcJjNUpdq93LN
+    meta:
+      chartId: 131
+      height: 50
+      sliceName: "\u0415\u0436\u0435\u043C\u0435\u0441\u044F\u0447\u043D\u0430\u044F\
+        \ \u0434\u0438\u043D\u0430\u043C\u0438\u043A\u0430 \u043A\u043E\u043B\u0438\
+        \u0447\u0435\u0441\u0442\u0432\u0430 \u043F\u0440\u043E\u0434\u0430\u043D\u043D\
+        \u044B\u0445 \u0442\u043E\u0432\u0430\u0440\u043E\u0432"
+      uuid: 7c066070-c78f-4f7c-ad6e-6edd89b7dbb9
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-cFHHxIdLYi114TYAP2PkV
+    type: CHART
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-ko0pmhmBmDNSWTUQ0kQ54
+    - ROW-cFHHxIdLYi114TYAP2PkV
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: "\u041E\u0431\u0437\u043E\u0440 \u0411\u0438\u0437\u043D\u0435\u0441\u0430\
+        \ (\u0434\u043B\u044F \u0420\u0443\u043A\u043E\u0432\u043E\u0434\u0441\u0442\
+        \u0432\u0430)"
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-cFHHxIdLYi114TYAP2PkV:
+    children:
+    - CHART-explore-125-1
+    - CHART-ytpY6sMkNcJjNUpdq93LN
+    id: ROW-cFHHxIdLYi114TYAP2PkV
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-ko0pmhmBmDNSWTUQ0kQ54:
+    children:
+    - CHART-explore-123-1
+    - CHART-c6jGQbS08Agwz_FOyK1qM
+    - CHART-565Ec_R9iLb7iXxgQ78_Z
+    id: ROW-ko0pmhmBmDNSWTUQ0kQ54
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+metadata:
+  chart_configuration:
+    '124':
+      id: 124
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 123
+        - 125
+        - 131
+        - 211
+    '125':
+      id: 125
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 123
+        - 124
+        - 131
+        - 211
+    '131':
+      id: 131
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 123
+        - 124
+        - 125
+        - 211
+    '211':
+      id: 211
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 123
+        - 124
+        - 125
+        - 131
+  global_chart_configuration:
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    chartsInScope:
+    - 123
+    - 124
+    - 125
+    - 131
+    - 211
+  map_label_colors:
+    SUM(price): '#1FA8C9'
+    industry_commerce_and_business: '#454E7C'
+    diapers_and_hygiene: '#5AC189'
+    fashion_shoes: '#FF7F44'
+    home_appliances: '#666666'
+    fashion_sport: '#E04355'
+    small_appliances: '#FCC700'
+    toys: '#A868B7'
+    health_beauty: '#3CCCCB'
+    fashion_underwear_beach: '#A38F79'
+    dvds_blu_ray: '#8FD3E4'
+    drinks: '#A1A6BD'
+    construction_tools_construction: '#ACE1C4'
+    agro_industry_and_commerce: '#FEC0A1'
+    arts_and_craftmanship: '#B2B2B2'
+    books_general_interest: '#EFA1AA'
+    fixed_telephony: '#FDE380'
+    security_and_services: '#D3B3DA'
+    costruction_tools_garden: '#9EE5E5'
+    computers_accessories: '#D1C6BC'
+    consoles_games: '#454E7C'
+    bed_bath_table: '#5AC189'
+    tablets_printing_image: '#FF7F44'
+    party_supplies: '#666666'
+    la_cuisine: '#E04355'
+    cds_dvds_musicals: '#FCC700'
+    fashion_bags_accessories: '#A868B7'
+    garden_tools: '#3CCCCB'
+    construction_tools_safety: '#A38F79'
+    luggage_accessories: '#8FD3E4'
+    construction_tools_lights: '#A1A6BD'
+    furniture_mattress_and_upholstery: '#ACE1C4'
+    kitchen_dining_laundry_garden_furniture: '#FEC0A1'
+    housewares: '#B2B2B2'
+    art: '#EFA1AA'
+    small_appliances_home_oven_and_coffee: '#FDE380'
+    fashio_female_clothing: '#D3B3DA'
+    home_appliances_2: '#9EE5E5'
+    baby: '#D1C6BC'
+    food: '#D1C6BC'
+    fashion_childrens_clothes: '#454E7C'
+    books_technical: '#5AC189'
+    home_confort: '#FF7F44'
+    market_place: '#666666'
+    stationery: '#E04355'
+    furniture_living_room: '#FCC700'
+    costruction_tools_tools: '#A868B7'
+    audio: '#3CCCCB'
+    watches_gifts: '#A38F79'
+    furniture_bedroom: '#8FD3E4'
+    cool_stuff: '#A1A6BD'
+    computers: '#ACE1C4'
+    fashion_male_clothing: '#FEC0A1'
+    perfumery: '#B2B2B2'
+    signaling_and_security: '#EFA1AA'
+    books_imported: '#FDE380'
+    air_conditioning: '#D3B3DA'
+    pet_shop: '#9EE5E5'
+    office_furniture: '#9EE5E5'
+    home_comfort_2: '#D1C6BC'
+    food_drink: '#454E7C'
+    furniture_decor: '#5AC189'
+    electronics: '#FF7F44'
+    musical_instruments: '#666666'
+    cine_photo: '#E04355'
+    sports_leisure: '#FCC700'
+    telephony: '#A868B7'
+    flowers: '#3CCCCB'
+    home_construction: '#A38F79'
+    auto: '#8FD3E4'
+    christmas_supplies: '#A1A6BD'
+    music: '#ACE1C4'
+    COUNT_DISTINCT(order_id): '#1FA8C9'
+    SUM(payment_value): '#454E7C'
+    "SUM(\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u043F\u0440\u043E\u0434\u0430\u0436)": '#1FA8C9'
+    AC: '#454E7C'
+    rio branco: '#5AC189'
+    AL: '#FF7F44'
+    arapiraca: '#666666'
+    maceio: '#E04355'
+    AM: '#ACE1C4'
+    manaus: '#FEC0A1'
+    AP: '#EFA1AA'
+    macapa: '#FDE380'
+    santana: '#D3B3DA'
+    BA: '#A1A6BD'
+    barreiras: '#ACE1C4'
+    camacari: '#FEC0A1'
+    cicero dantas: '#B2B2B2'
+    cruz das almas: '#EFA1AA'
+    eunapolis: '#454E7C'
+    feira de santana: '#D3B3DA'
+    guanambi: '#9EE5E5'
+    ilheus: '#FCC700'
+    ipiau: '#A38F79'
+    irece: '#8FD3E4'
+    itabuna: '#454E7C'
+    jequie: '#FF7F44'
+    juazeiro: '#666666'
+    lauro de freitas: '#E04355'
+    luis eduardo magalhaes: '#FCC700'
+    macaubas: '#A868B7'
+    paulo afonso: '#3CCCCB'
+    porto seguro: '#A38F79'
+    salvador: '#8FD3E4'
+    simoes filho: '#FEC0A1'
+    teixeira de freitas: '#EFA1AA'
+    vitoria da conquista: '#FDE380'
+    CE: '#D3B3DA'
+    crato: '#EFA1AA'
+    fortaleza: '#FDE380'
+    maracanau: '#D3B3DA'
+    ubajara: '#9EE5E5'
+    DF: '#D1C6BC'
+    brasilia: '#FF7F44'
+    taguatinga: '#E04355'
+    ES: '#FEC0A1'
+    cachoeiro de itapemirim: '#B2B2B2'
+    cariacica: '#666666'
+    colatina: '#E04355'
+    guarapari: '#5AC189'
+    linhares: '#A868B7'
+    santa maria de jetiba: '#3CCCCB'
+    sao mateus: '#A38F79'
+    serra: '#8FD3E4'
+    vila velha: '#A1A6BD'
+    vitoria: '#ACE1C4'
+    GO: '#FEC0A1'
+    alto paraiso de goias: '#B2B2B2'
+    anapolis: '#FDE380'
+    aparecida de goiania: '#D3B3DA'
+    caldas novas: '#9EE5E5'
+    catalao: '#D1C6BC'
+    formosa: '#D1C6BC'
+    goiania: '#454E7C'
+    itumbiara: '#5AC189'
+    jatai: '#E04355'
+    mineiros: '#FCC700'
+    morrinhos: '#A868B7'
+    rio verde: '#3CCCCB'
+    trindade: '#A38F79'
+    valparaiso de goias: '#8FD3E4'
+    MA: '#A1A6BD'
+    sao luis: '#ACE1C4'
+    MG: '#FEC0A1'
+    alfenas: '#B2B2B2'
+    araguari: '#FDE380'
+    araxa: '#D3B3DA'
+    barbacena: '#9EE5E5'
+    belo horizonte: '#EFA1AA'
+    belo oriente: '#FDE380'
+    betim: '#D3B3DA'
+    bom despacho: '#454E7C'
+    cambui: '#D1C6BC'
+    capitolio: '#5AC189'
+    caratinga: '#FF7F44'
+    carmo do rio claro: '#666666'
+    claudio: '#E04355'
+    conceicao da aparecida: '#FCC700'
+    conselheiro lafaiete: '#A868B7'
+    contagem: '#3CCCCB'
+    coromandel: '#8FD3E4'
+    curvelo: '#A1A6BD'
+    datas: '#ACE1C4'
+    divinopolis: '#B2B2B2'
+    espinosa: '#A1A6BD'
+    extrema: '#ACE1C4'
+    formiga: '#454E7C'
+    frutal: '#B2B2B2'
+    governador valadares: '#5AC189'
+    guaxupe: '#FDE380'
+    ibirite: '#D3B3DA'
+    inconfidentes: '#FF7F44'
+    ipatinga: '#D1C6BC'
+    itabira: '#666666'
+    itabirito: '#E04355'
+    itajuba: '#FCC700'
+    itauna: '#A868B7'
+    ituiutaba: '#3CCCCB'
+    janauba: '#A38F79'
+    joao monlevade: '#8FD3E4'
+    juiz de fora: '#A868B7'
+    lagoa santa: '#3CCCCB'
+    lavras: '#A38F79'
+    manhuacu: '#8FD3E4'
+    montes claros: '#A1A6BD'
+    muriae: '#ACE1C4'
+    nova lima: '#FEC0A1'
+    nova serrana: '#B2B2B2'
+    ouro branco: '#EFA1AA'
+    ouro preto: '#FDE380'
+    padre carvalho: '#D3B3DA'
+    para de minas: '#9EE5E5'
+    paracatu: '#D1C6BC'
+    patos de minas: '#454E7C'
+    patrocinio: '#5AC189'
+    pedro leopoldo: '#FF7F44'
+    pirapora: '#666666'
+    pocos de caldas: '#E04355'
+    ponte nova: '#FCC700'
+    pouso alegre: '#FCC700'
+    raposos: '#A868B7'
+    ribeirao das neves: '#3CCCCB'
+    sabara: '#454E7C'
+    sacramento: '#8FD3E4'
+    salinas: '#A1A6BD'
+    santa barbara: '#ACE1C4'
+    santa luzia: '#FEC0A1'
+    sao joao del rei: '#B2B2B2'
+    sao joao nepomuceno: '#EFA1AA'
+    sao lourenco: '#FDE380'
+    sao sebastiao do paraiso: '#D3B3DA'
+    sete lagoas: '#9EE5E5'
+    teofilo otoni: '#D1C6BC'
+    timoteo: '#5AC189'
+    tres coracoes: '#FF7F44'
+    uba: '#666666'
+    uberaba: '#E04355'
+    uberlandia: '#666666'
+    unai: '#E04355'
+    varginha: '#FCC700'
+    vespasiano: '#A868B7'
+    vicosa: '#3CCCCB'
+    MS: '#A38F79'
+    aparecida do taboado: '#8FD3E4'
+    campo grande: '#A1A6BD'
+    corumba: '#ACE1C4'
+    dourados: '#FEC0A1'
+    ponta pora: '#B2B2B2'
+    MT: '#EFA1AA'
+    alto boa vista: '#FDE380'
+    barra do garcas: '#D3B3DA'
+    campo novo do parecis: '#9EE5E5'
+    cuiaba: '#D1C6BC'
+    rondonopolis: '#454E7C'
+    sinop: '#5AC189'
+    sorriso: '#FF7F44'
+    varzea grande: '#FF7F44'
+    PA: '#666666'
+    ananindeua: '#E04355'
+    belem: '#FCC700'
+    redencao: '#A868B7'
+    santarem: '#3CCCCB'
+    PB: '#A38F79'
+    campina grande: '#8FD3E4'
+    joao pessoa: '#454E7C'
+    PE: '#ACE1C4'
+    caruaru: '#FEC0A1'
+    garanhuns: '#B2B2B2'
+    jaboatao dos guararapes: '#EFA1AA'
+    olinda: '#FDE380'
+    paulista: '#D3B3DA'
+    petrolina: '#9EE5E5'
+    recife: '#D1C6BC'
+    PI: '#5AC189'
+    teresina: '#454E7C'
+    PR: '#5AC189'
+    almirante tamandare: '#FF7F44'
+    apucarana: '#666666'
+    arapongas: '#E04355'
+    araucaria: '#FCC700'
+    campo mourao: '#A868B7'
+    cascavel: '#3CCCCB'
+    castro: '#A38F79'
+    cianorte: '#8FD3E4'
+    colombo: '#A1A6BD'
+    curitiba: '#ACE1C4'
+    foz do iguacu: '#FEC0A1'
+    francisco beltrao: '#B2B2B2'
+    guarapuava: '#EFA1AA'
+    irati: '#D3B3DA'
+    lapa: '#9EE5E5'
+    laranjeiras do sul: '#D1C6BC'
+    londrina: '#D1C6BC'
+    maringa: '#454E7C'
+    matinhos: '#5AC189'
+    paranagua: '#FF7F44'
+    paranavai: '#666666'
+    pato branco: '#E04355'
+    pinhais: '#FCC700'
+    ponta grossa: '#A868B7'
+    rolandia: '#3CCCCB'
+    sao jose dos pinhais: '#A38F79'
+    toledo: '#A1A6BD'
+    umuarama: '#ACE1C4'
+    uniao da vitoria: '#FEC0A1'
+    RJ: '#B2B2B2'
+    angra dos reis: '#EFA1AA'
+    araruama: '#FDE380'
+    arraial do cabo: '#D3B3DA'
+    barra do pirai: '#9EE5E5'
+    barra mansa: '#D3B3DA'
+    belford roxo: '#9EE5E5'
+    cabo frio: '#D1C6BC'
+    campos dos goytacazes: '#454E7C'
+    duque de caxias: '#5AC189'
+    itaborai: '#FF7F44'
+    itaguai: '#666666'
+    itaperuna: '#E04355'
+    japeri: '#FCC700'
+    macae: '#A868B7'
+    mage: '#3CCCCB'
+    marica: '#A38F79'
+    mesquita: '#8FD3E4'
+    miguel pereira: '#A1A6BD'
+    nilopolis: '#ACE1C4'
+    niteroi: '#FEC0A1'
+    nova friburgo: '#B2B2B2'
+    nova iguacu: '#EFA1AA'
+    paracambi: '#FDE380'
+    paraty: '#FDE380'
+    paty do alferes: '#D3B3DA'
+    petropolis: '#9EE5E5'
+    queimados: '#D1C6BC'
+    resende: '#5AC189'
+    rio das ostras: '#FF7F44'
+    rio de janeiro: '#666666'
+    santo antonio de padua: '#E04355'
+    sao goncalo: '#FCC700'
+    sao joao de meriti: '#A868B7'
+    sao pedro da aldeia: '#3CCCCB'
+    saquarema: '#A38F79'
+    seropedica: '#A1A6BD'
+    teresopolis: '#B2B2B2'
+    valenca: '#EFA1AA'
+    vassouras: '#A1A6BD'
+    volta redonda: '#ACE1C4'
+    RN: '#FEC0A1'
+    natal: '#B2B2B2'
+    parnamirim: '#EFA1AA'
+    RO: '#FDE380'
+    porto velho: '#454E7C'
+    RR: '#9EE5E5'
+    boa vista: '#D1C6BC'
+    RS: '#5AC189'
+    alegrete: '#666666'
+    alvorada: '#E04355'
+    bage: '#FCC700'
+    bento goncalves: '#A868B7'
+    cachoeira do sul: '#3CCCCB'
+    cachoeirinha: '#A38F79'
+    candido godoi: '#8FD3E4'
+    canoas: '#3CCCCB'
+    capao da canoa: '#A38F79'
+    caxias do sul: '#8FD3E4'
+    erechim: '#A1A6BD'
+    estancia velha: '#ACE1C4'
+    esteio: '#FEC0A1'
+    gravatai: '#B2B2B2'
+    guapore: '#EFA1AA'
+    ibiruba: '#FDE380'
+    ijui: '#D3B3DA'
+    imbe: '#9EE5E5'
+    lajeado: '#D1C6BC'
+    novo hamburgo: '#454E7C'
+    osorio: '#5AC189'
+    passo fundo: '#FF7F44'
+    pelotas: '#666666'
+    porto alegre: '#E04355'
+    rio grande: '#FCC700'
+    rosario do sul: '#A868B7'
+    santa cruz do sul: '#A868B7'
+    santa maria: '#3CCCCB'
+    santana do livramento: '#A38F79'
+    santiago: '#8FD3E4'
+    santo angelo: '#A1A6BD'
+    sao leopoldo: '#ACE1C4'
+    sao sebastiao do cai: '#FEC0A1'
+    sapiranga: '#B2B2B2'
+    sapucaia do sul: '#EFA1AA'
+    tramandai: '#FDE380'
+    uruguaiana: '#D3B3DA'
+    venancio aires: '#9EE5E5'
+    veranopolis: '#D1C6BC'
+    viamao: '#454E7C'
+    SC: '#5AC189'
+    balneario camboriu: '#FF7F44'
+    blumenau: '#666666'
+    brusque: '#E04355'
+    campos novos: '#FCC700'
+    celso ramos: '#FCC700'
+    chapeco: '#A868B7'
+    concordia: '#3CCCCB'
+    criciuma: '#A38F79'
+    curitibanos: '#8FD3E4'
+    faxinal dos guedes: '#A1A6BD'
+    florianopolis: '#ACE1C4'
+    garopaba: '#FEC0A1'
+    gaspar: '#B2B2B2'
+    herval d'oeste: '#EFA1AA'
+    icara: '#FDE380'
+    indaial: '#D3B3DA'
+    itajai: '#9EE5E5'
+    jaragua do sul: '#D1C6BC'
+    joinville: '#454E7C'
+    lages: '#5AC189'
+    laguna: '#FF7F44'
+    mafra: '#666666'
+    palhoca: '#E04355'
+    rio do sul: '#E04355'
+    sao bento do sul: '#FCC700'
+    sao jose: '#A868B7'
+    sao miguel do oeste: '#3CCCCB'
+    tubarao: '#A38F79'
+    videira: '#8FD3E4'
+    SE: '#A1A6BD'
+    aracaju: '#ACE1C4'
+    capela: '#FEC0A1'
+    SP: '#B2B2B2'
+    adamantina: '#EFA1AA'
+    americana: '#FDE380'
+    amparo: '#D3B3DA'
+    andradina: '#9EE5E5'
+    aracatuba: '#D1C6BC'
+    araraquara: '#454E7C'
+    araras: '#5AC189'
+    artur nogueira: '#FF7F44'
+    aruja: '#666666'
+    assis: '#666666'
+    atibaia: '#E04355'
+    avare: '#FCC700'
+    barretos: '#A868B7'
+    barueri: '#3CCCCB'
+    bauru: '#A38F79'
+    bebedouro: '#8FD3E4'
+    bertioga: '#A1A6BD'
+    birigui: '#ACE1C4'
+    boituva: '#FEC0A1'
+    botucatu: '#B2B2B2'
+    braganca paulista: '#EFA1AA'
+    cacapava: '#FDE380'
+    cachoeira paulista: '#D3B3DA'
+    caieiras: '#9EE5E5'
+    cajamar: '#D1C6BC'
+    campinas: '#454E7C'
+    campo limpo paulista: '#5AC189'
+    capao bonito: '#FF7F44'
+    capivari: '#FF7F44'
+    caraguatatuba: '#666666'
+    carapicuiba: '#E04355'
+    catanduva: '#FCC700'
+    cerqueira cesar: '#A868B7'
+    cerquilho: '#3CCCCB'
+    cordeiropolis: '#A38F79'
+    cosmopolis: '#8FD3E4'
+    cotia: '#A1A6BD'
+    cravinhos: '#ACE1C4'
+    cruzeiro: '#FEC0A1'
+    cubatao: '#B2B2B2'
+    diadema: '#EFA1AA'
+    dracena: '#FDE380'
+    embu: '#D3B3DA'
+    embu-guacu: '#9EE5E5'
+    embu das artes: '#D1C6BC'
+    fernandopolis: '#454E7C'
+    ferraz de vasconcelos: '#5AC189'
+    franca: '#5AC189'
+    francisco morato: '#FF7F44'
+    franco da rocha: '#666666'
+    guara: '#E04355'
+    guararapes: '#FCC700'
+    guaratingueta: '#A868B7'
+    guaruja: '#3CCCCB'
+    guarulhos: '#A38F79'
+    hortolandia: '#8FD3E4'
+    ilha solteira: '#A1A6BD'
+    ilhabela: '#ACE1C4'
+    indaiatuba: '#FEC0A1'
+    ipua: '#B2B2B2'
+    itajobi: '#EFA1AA'
+    itanhaem: '#FDE380'
+    itapecerica da serra: '#D3B3DA'
+    itapetininga: '#9EE5E5'
+    itapeva: '#D1C6BC'
+    itapevi: '#454E7C'
+    itapira: '#454E7C'
+    itapolis: '#FF7F44'
+    itaquaquecetuba: '#666666'
+    itarare: '#E04355'
+    itatiba: '#FCC700'
+    itu: '#A868B7'
+    itupeva: '#3CCCCB'
+    ituverava: '#A38F79'
+    jaboticabal: '#8FD3E4'
+    jacarei: '#A1A6BD'
+    jaguariuna: '#ACE1C4'
+    jandira: '#FEC0A1'
+    jardinopolis: '#B2B2B2'
+    jau: '#EFA1AA'
+    jundiai: '#FDE380'
+    leme: '#D3B3DA'
+    lencois paulista: '#9EE5E5'
+    limeira: '#D1C6BC'
+    lins: '#D1C6BC'
+    lorena: '#454E7C'
+    louveira: '#5AC189'
+    macatuba: '#FF7F44'
+    mairipora: '#666666'
+    marilia: '#E04355'
+    maua: '#FCC700'
+    mirassol: '#A868B7'
+    mococa: '#3CCCCB'
+    mogi-guacu: '#A38F79'
+    mogi das cruzes: '#8FD3E4'
+    mogi mirim: '#A1A6BD'
+    mongagua: '#ACE1C4'
+    monte azul paulista: '#FEC0A1'
+    monte mor: '#B2B2B2'
+    morro agudo: '#EFA1AA'
+    nova odessa: '#FDE380'
+    olimpia: '#D3B3DA'
+    orlandia: '#9EE5E5'
+    osasco: '#9EE5E5'
+    ourinhos: '#D1C6BC'
+    paulinia: '#454E7C'
+    penapolis: '#5AC189'
+    peruibe: '#FF7F44'
+    pindamonhangaba: '#666666'
+    piracaia: '#E04355'
+    piracicaba: '#FCC700'
+    pirassununga: '#A868B7'
+    poa: '#3CCCCB'
+    pompeia: '#A38F79'
+    porto feliz: '#8FD3E4'
+    porto ferreira: '#A1A6BD'
+    praia grande: '#ACE1C4'
+    presidente prudente: '#FEC0A1'
+    presidente venceslau: '#B2B2B2'
+    rancharia: '#EFA1AA'
+    registro: '#FDE380'
+    ribeirao pires: '#D3B3DA'
+    ribeirao preto: '#D3B3DA'
+    rio claro: '#9EE5E5'
+    salto: '#D1C6BC'
+    santa barbara d'oeste: '#454E7C'
+    santa fe do sul: '#5AC189'
+    santa isabel: '#FF7F44'
+    santana de parnaiba: '#666666'
+    santo andre: '#E04355'
+    santos: '#FCC700'
+    sao bernardo do campo: '#A868B7'
+    sao caetano do sul: '#3CCCCB'
+    sao carlos: '#A38F79'
+    sao joao da boa vista: '#8FD3E4'
+    sao joaquim da barra: '#A1A6BD'
+    sao jose do rio pardo: '#ACE1C4'
+    sao jose do rio preto: '#FEC0A1'
+    sao jose dos campos: '#B2B2B2'
+    sao paulo: '#EFA1AA'
+    sao roque: '#EFA1AA'
+    sao sebastiao: '#FDE380'
+    sao vicente: '#454E7C'
+    sertaozinho: '#9EE5E5'
+    sorocaba: '#5AC189'
+    sumare: '#FF7F44'
+    suzano: '#666666'
+    taboao da serra: '#FCC700'
+    taquaritinga: '#3CCCCB'
+    tatui: '#A38F79'
+    taubate: '#8FD3E4'
+    tiete: '#A1A6BD'
+    tremembe: '#ACE1C4'
+    tupa: '#FEC0A1'
+    ubatuba: '#B2B2B2'
+    valinhos: '#8FD3E4'
+    vargem grande paulista: '#A1A6BD'
+    varzea paulista: '#ACE1C4'
+    vinhedo: '#FEC0A1'
+    viradouro: '#B2B2B2'
+    votorantim: '#EFA1AA'
+    votuporanga: '#FDE380'
+    TO: '#D3B3DA'
+    araguaina: '#9EE5E5'
+    palmas: '#D1C6BC'
+    "MAX(\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u043F\u0440\u043E\u0434\u0430\u043D\u043D\u044B\u0445 \u0442\u043E\u0432\u0430\u0440\u043E\u0432)": '#393b79'
+  color_scheme: ''
+  refresh_frequency: 0
+  color_scheme_domain: []
+  expanded_slices: {}
+  label_colors: {}
+  shared_label_colors:
+  - agro_industry_and_commerce
+  - air_conditioning
+  - art
+  - audio
+  - auto
+  - baby
+  - bed_bath_table
+  - books_general_interest
+  - books_imported
+  - books_technical
+  - christmas_supplies
+  - cine_photo
+  - computers
+  - computers_accessories
+  - consoles_games
+  - construction_tools_construction
+  - construction_tools_lights
+  - construction_tools_safety
+  - cool_stuff
+  - costruction_tools_garden
+  - costruction_tools_tools
+  - diapers_and_hygiene
+  - drinks
+  - dvds_blu_ray
+  - electronics
+  - fashio_female_clothing
+  - fashion_bags_accessories
+  - fashion_male_clothing
+  - fashion_shoes
+  - fashion_underwear_beach
+  - fixed_telephony
+  - food
+  - food_drink
+  - furniture_bedroom
+  - furniture_decor
+  - furniture_living_room
+  - furniture_mattress_and_upholstery
+  - garden_tools
+  - health_beauty
+  - home_appliances
+  - home_appliances_2
+  - home_comfort_2
+  - home_confort
+  - home_construction
+  - housewares
+  - industry_commerce_and_business
+  - kitchen_dining_laundry_garden_furniture
+  - luggage_accessories
+  - market_place
+  - musical_instruments
+  - office_furniture
+  - perfumery
+  - pet_shop
+  - signaling_and_security
+  - small_appliances
+  - small_appliances_home_oven_and_coffee
+  - sports_leisure
+  - stationery
+  - tablets_printing_image
+  - telephony
+  - toys
+  - watches_gifts
+  timed_refresh_immune_slices: []
+  cross_filters_enabled: true
+  default_filters: '{}'
+  native_filter_configuration:
+  - id: NATIVE_FILTER-23G-FeJvVy3xAU3li9Zgw
+    controlValues:
+      enableEmptyFilter: false
+      defaultToFirstItem: false
+      multiSelect: true
+      searchAllOptions: false
+      inverseSelection: false
+    name: Category filter
+    filterType: filter_select
+    targets:
+    - column:
+        name: product_category_name_english
+      datasetUuid: 4e6c996d-c014-4379-bdbb-ee770c05b631
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    cascadeParentIds: []
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    type: NATIVE_FILTER
+    description: ''
+    chartsInScope:
+    - 123
+    - 124
+    - 125
+    tabsInScope: []
+version: 1.0.0

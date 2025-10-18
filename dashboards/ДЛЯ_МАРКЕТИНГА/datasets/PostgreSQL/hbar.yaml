@@ -1,0 +1,59 @@
+table_name: hbar
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+catalog: olist_db
+schema: public
+sql: "SELECT\n    c.customer_city AS \"\u0413\u043E\u0440\u043E\u0434\",\n    AVG(op.payment_value)\
+  \ as \"\u0421\u0440\u0435\u0434\u043D\u0438\u0439 \u0447\u0435\u043A\"\nFROM\n \
+  \   order_payments AS op\nJOIN\n    orders AS o ON op.order_id = o.order_id\nJOIN\n\
+  \    customers AS c ON o.customer_id = c.customer_id\nGROUP BY\n    c.customer_city\n\
+  ORDER BY\n    \"\u0421\u0440\u0435\u0434\u043D\u0438\u0439 \u0447\u0435\u043A\"\
+  \ DESC\nLIMIT 10;"
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: 968559a6-5a27-4b6b-a71a-65345d2ef643
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: "\u0421\u0440\u0435\u0434\u043D\u0438\u0439 \u0447\u0435\u043A"
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: FLOAT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: "\u0413\u043E\u0440\u043E\u0434"
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 36600231-221d-41fd-b910-1bb35b9465df

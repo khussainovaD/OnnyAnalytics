@@ -1,0 +1,112 @@
+table_name: Normalized_Comparison_Data
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+catalog: olist_db
+schema: public
+sql: "SELECT\n    oi.order_id,\n    oi.product_id,\n    \n    -- \u0418\u0441\u0445\
+  \u043E\u0434\u043D\u044B\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u044F\n\
+  \    oi.price,\n    oi.freight_value,\n    \n    -- \u041D\u043E\u0440\u043C\u0430\
+  \u043B\u0438\u0437\u043E\u0432\u0430\u043D\u043D\u0430\u044F \u0446\u0435\u043D\u0430\
+  \ [0, 1]\n    (oi.price - MIN(oi.price) OVER ()) / \n    (MAX(oi.price) OVER ()\
+  \ - MIN(oi.price) OVER ()) AS normalized_price,\n    \n    -- \u041D\u043E\u0440\
+  \u043C\u0430\u043B\u0438\u0437\u043E\u0432\u0430\u043D\u043D\u0430\u044F \u0441\u0442\
+  \u043E\u0438\u043C\u043E\u0441\u0442\u044C \u0434\u043E\u0441\u0442\u0430\u0432\u043A\
+  \u0438 [0, 1]\n    (oi.freight_value - MIN(oi.freight_value) OVER ()) / \n    (MAX(oi.freight_value)\
+  \ OVER () - MIN(oi.freight_value) OVER ()) AS normalized_freight_value\nFROM\n \
+  \   order_items oi\nORDER BY\n    oi.order_id\nLIMIT 50;"
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: 85f3dc70-858e-4a1b-ac5b-4c3abadff703
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: normalized_freight_value
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: FLOAT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: normalized_price
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: FLOAT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: freight_value
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: FLOAT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: price
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: FLOAT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: product_id
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: order_id
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 36600231-221d-41fd-b910-1bb35b9465df
