@@ -1,0 +1,19 @@
+# custom_queries.yaml
+custom_queries:
+  # Уникальное имя для PromQL-метрики
+  table_count:
+    # Описание метрики
+    help: "Общее количество пользовательских таблиц в базе данных"
+    # Ваш SQL-запрос
+    query: |
+      SELECT
+        COUNT(*) AS total_tables
+      FROM
+        information_schema.tables
+      WHERE
+        table_schema NOT IN ('pg_catalog', 'information_schema') AND table_type = 'BASE TABLE';
+    # Настройка метрик, которые будут экспортироваться
+    metrics:
+      - total_tables:
+          usage: "GAUGE" # Тип метрики: GAUGE для счетчиков, которые могут расти/падать
+          description: "Общее количество таблиц"

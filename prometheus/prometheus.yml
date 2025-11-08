@@ -1,0 +1,35 @@
+global:
+  scrape_interval: 15s 
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['prometheus:9090'] # Используем имя сервиса
+
+  - job_name: 'grafana'
+    static_configs:
+      - targets: ['grafana:3000'] # Используем имя сервиса
+
+  # --- НОВЫЙ JOB ---
+  - job_name: 'node_exporter'
+    static_configs:
+      # Используем имя сервиса из docker-compose
+      - targets: ['node-exporter:9100']
+
+  - job_name: 'postgres_exporter'
+    static_configs:
+      # Используем имя сервиса и порт Exporter
+      - targets: ['postgres-exporter:9187']
+
+  - job_name: 'custom_exporter'
+    static_configs:
+      - targets: ['custom-exporter:9876']
+
+  - job_name: 'custom_api_exchange'
+    static_configs:
+      - targets: ['host.docker.internal:8000']
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: instance
+        replacement: 'exchange_rate_api'
+
